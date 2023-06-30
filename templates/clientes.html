@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Clientes{% endblock %}
+
+{% block content %}
+    <form class="row row-cols-lg-auto g-3 align-items-center" action="" method="get">
+        <div class="col-12">
+            <label class="col-form-label" for="nombre">Nombre</label>
+            <input class="form-control" type="text" name="apellidos">
+        </div>
+        <div class="col-12"><input class="btn btn-primary" type="submit" value="Buscar"></div>
+    </form>
+
+    <table class="table">
+        {% for cliente in clientes %}
+        <thead>
+            <tr>
+                <th>Nombres e Apellidos</th>
+                <th>Ciudade</th>
+                <th>País</th>
+            </tr>
+        </thead>
+        {%endfor}
+        <tbody>
+            <!-- TODO: Recorrer secuencia de clientes e xerar filas da táboa -->
+        </tbody>
+    </table>
+{% endblock %}
